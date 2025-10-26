@@ -142,13 +142,12 @@ export default {
     ],
     useEmoji: true,
     scopes: [
+      'root', // 根目录
       'core', // 核心功能
       'api', // API相关
       'ui', // 用户界面
       'config', // 配置文件
       'deps', // 依赖项
-      'auth', // 认证授权
-      'db', // 数据库
       'test', // 测试
       'build', // 构建
       'ci', // 持续集成
