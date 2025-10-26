@@ -1,0 +1,49 @@
+{
+  "name": "jmi-open-atom-server-local",
+  "version": "1.0.0",
+  "description": "一个基于 Json 文件的本地社团管理服务器",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint:eslint": "eslint",
+    "lint:prettier": "prettier --write .",
+    "lint:all": "npm run lint:eslint && npm run lint:prettier",
+    "commit": "git-cz",
+    "prepare": "husky",
+    "precommit": "lint-staged"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["npm run lint:eslint"],
+    "*.{json,css,scss,md}": ["npm run lint:prettier"]
+  },
+  "keywords": [
+    "club"
+  ],
+  "author": "EmanYanzhou",
+  "license": "MIT",
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.38.0",
+    "@types/node": "^24.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}
